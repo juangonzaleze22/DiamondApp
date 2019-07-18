@@ -1,6 +1,6 @@
 <ion-header class="navbar-edit">
   <ion-toolbar>
-    <ion-buttons slot="start">   
+    <ion-buttons slot="start" (click)="closeModal()">   
       <button ion-button icon-only> 
         <ion-icon name="arrow-round-back"></ion-icon> 
       </button> 
@@ -15,12 +15,7 @@
 <ion-content class="recargar">
   <div class="box">
     <p class="text-description">Aquí podras recargar tu monedero para continuar disfrutando de la plataforma</p>
-    <ion-item class="first-item">
-        <ion-input placeholder="Agregar nueva"></ion-input>
-        <ion-button class="primary" slot="end">
-          <ion-icon name="add"></ion-icon>
-        </ion-button>
-      </ion-item>
+  
     <ion-list>
       <ion-radio-group>
         <ion-list-header>
@@ -28,19 +23,44 @@
         </ion-list-header>
     
         <ion-item>
-          <ion-label>0423-3321-4525-2124</ion-label>
+          <ion-label>Visa</ion-label>
           <ion-radio slot="end" checked></ion-radio>
         </ion-item>
     
         <ion-item>
-          <ion-label>0423-3321-4525-2124</ion-label>
+          <ion-label>Mastercard</ion-label>
           <ion-radio slot="end"></ion-radio>
         </ion-item>
-    
+        <hr>
+      
         <ion-item>
-          <ion-label>0423-3321-4525-2124</ion-label>
-          <ion-radio slot="end"></ion-radio>
+          <ion-label position="floating">Nombre del titular</ion-label>
+          <ion-input class="edit"></ion-input>
         </ion-item>
+        <ion-item>
+          <ion-label position="floating">Numero de la tarjeta</ion-label>
+          <ion-input class="edit" type="number"></ion-input>
+        </ion-item>
+        <h5 class="title-date">Fecha de expiración</h5>
+        <div class="date">
+          <ion-item>
+            <ion-input class="edit" type="date"></ion-input>
+          </ion-item>
+          <span>-</span>
+          <ion-item>
+            <ion-input class="edit" type="date"></ion-input>
+          </ion-item>
+        </div>
+        <ion-item>
+          <ion-label position="floating">Código de seguridad</ion-label>
+          <ion-input class="edit" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Monto</ion-label>
+          <ion-input class="edit" type="number"></ion-input>
+        </ion-item>
+
+    
       </ion-radio-group>
     </ion-list>
     <ion-button class="btn-recargar">Recargar</ion-button>

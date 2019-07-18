@@ -4,3 +4,155 @@
 // styles are for the entire app and not just one component. Additionally, this 
 // file can hold Sass mixins, functions, and placeholder classes to be imported 
 // and used throughout the application.
+
+
+.navbar-edit{
+    ion-toolbar{
+        --background: var(--primary);
+        display: flex;
+        align-items: center;
+           
+        button{
+            background-color: transparent;
+            color: #fff;
+            font-size: 24px;
+            margin-top: 4px;
+        }
+    }
+
+    ion-menu-button{
+        color: #fff;
+    }
+    ion-back-button{
+        color: #fff !important;
+    }
+
+    ion-title{
+        color: #fff;
+        text-align: center;
+        margin-left: -48px;
+    }
+}
+/* Side menu */
+.toolbar-background{
+    --border-color: transparent !important;
+}
+.side-menu{
+    ion-header{
+        padding: 20px;
+        background: linear-gradient(to bottom, #18346e, #244a8b, #2f62aa, #387bc8, #4095e8);
+        ion-toolbar{
+            --background: transparent;
+           
+            img{
+                border-radius: 50%;
+                width: 120px;
+                margin: auto;
+                display: block;
+                padding: 10px;
+            }
+            .title{
+                text-align: center;
+                color: #fff;
+                font-size: 16px;
+                margin: 0 auto 4px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100%;
+            }
+            p{
+                text-align: center;
+                color: #fff;
+                font-size: 12px;
+                margin: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .status{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h5{
+            font-size: 18px;
+            color: var(--primary);
+            text-align:center;
+            margin: 0;
+        }
+        p{
+            font-size: 14px;
+            color: green;
+            text-align: center;
+            font-size: 20px;
+            margin: 0;
+        }
+    }
+
+
+    ion-list{
+        border-top: 1px solid #c1c1c1;
+        ion-item{  
+            ion-icon{
+                color: var(--gray) !important;
+            }
+            ion-label{
+                color: var(--gray) !important;
+            }
+        }
+    }
+
+  
+}
+
+
+button{
+    outline: none;
+}
+
+  // Alert styles
+
+  .alert-wrapper{
+    .alert-head{
+        background-color: var(--primary);
+        text-align: center;
+        color: #fff;
+        padding: 10px;
+        h2{
+            color: #fff;
+        }
+    }
+
+    .alert-message{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .alert-button-group {
+        justify-content: center;
+        display: flex;
+
+    
+        .cancel{
+            color: var(--gray);
+            width: 50%;
+            margin: 0;
+                span{
+                justify-content: center;
+            }
+        }
+        .submit{
+            color: var(--secondary);
+            width: 50%;
+            margin: 0;
+                span{
+                justify-content: center;
+            }
+        }
+    }
+}

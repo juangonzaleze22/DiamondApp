@@ -16,11 +16,12 @@
         }
         .primary-text{
             color: var(--primary);
-            font-size: 18px;
+            font-size: 16px;
             text-transform: none;
             letter-spacing: 0;
         }
         ion-list{
+           
             ion-item{
                 .primary{
                     --background: var(--primary);
@@ -28,6 +29,35 @@
                 ion-label{
                     color: var(--gray);
                     font-size: 14px;
+                }
+               .edit{
+                  color: var(--gray);
+                  input{
+                    color: var(--gray) !important;
+                  }
+               }
+              
+            }
+
+            .title-date{
+                color: var(--primary);
+                font-size: 16px;
+                text-transform: none;
+                letter-spacing: 0;
+                padding-left: 16px;
+                margin-top: 25px;
+            }
+
+            .date{
+                display: flex;
+                align-items: center;
+                ion-input{
+                    input{
+                        color: var(--gray); 
+                    }
+                }
+                span{
+                    color: var(--gray); 
                 }
             }
         }

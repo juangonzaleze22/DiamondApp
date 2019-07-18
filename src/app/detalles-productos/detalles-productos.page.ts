@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PlatosService } from '../services/platos.service';
+import { NavController,ModalController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-detalles-productos',
@@ -13,7 +14,7 @@ export class DetallesProductosPage implements OnInit {
   id;
   plato;
 
-  constructor(private route: ActivatedRoute, private router: Router, private platoService: PlatosService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private platoService: PlatosService, private nav:NavController,private modalCtrl:ModalController, public alertController: AlertController) { }
 
   ngOnInit() {
     this.sub = this.route
@@ -40,6 +41,33 @@ export class DetallesProductosPage implements OnInit {
     speed: 400,
     slidesPerView: 1,
   };
+
+  closeModal()
+  {
+    this.modalCtrl.dismiss();
+  }
+
+  async presentAlertMultipleButtons() {
+    const alert = await this.alertController.create({
+      header: 'Alerta',
+      message: '¿Esta seguro que desea comprar este plato?',
+      cssClass: 'alert-style',
+      buttons: [
+        {
+        text: 'Cancel',
+        role: 'cancel',
+        cssClass: 'cancel'
+      },
+      {
+        text: 'Aceptar',
+        role: 'submit',
+        cssClass: 'submit'
+      }
+    ]
+    });
+
+    await alert.present();
+  }
 
 
 }

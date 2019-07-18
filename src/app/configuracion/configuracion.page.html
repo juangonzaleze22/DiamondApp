@@ -1,9 +1,60 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>configuracion</ion-title>
+<ion-header class="navbar-edit">
+  <ion-toolbar> 
+    <ion-buttons slot="start" (click)=" closeModal()">   
+      <button ion-button icon-only> 
+        <ion-icon name="arrow-round-back"></ion-icon> 
+      </button> 
+    </ion-buttons>    
+    <!-- <ion-buttons slot="start">
+      <ion-back-button text="" icon="arrow-round-back"></ion-back-button>
+    </ion-buttons> -->
+    <ion-title>Configuración</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
 
+  <ion-list>
+    <div class="cont-image">
+      <img src="https://images.vexels.com/media/users/3/145908/preview2/52eabf633ca6414e60a7677b0b917d92-creador-de-avatar-masculino.jpg" alt="">
+      <label for="file-edit" class="btn-file">
+        <input id="file-edit" type="file" class="file">
+        <ion-icon class="edit-camera" ios="ios-camera" md="md-camera"></ion-icon>
+      </label>
+    </div>
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input class="edit" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Apellido</ion-label>
+      <ion-input class="edit" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Fecha de nacimiento</ion-label>
+      <ion-input class="edit" type="date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Correo electrónico</ion-label>
+      <ion-input class="edit" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Cargo</ion-label>
+      <ion-input class="edit" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Inactivo</ion-label>
+      <ion-input class="edit" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Inactivo</ion-label>
+         <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="brown">Si</ion-select-option>
+          <ion-select-option value="blonde">No</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-button class="btn-edit">Guardar cambios</ion-button>
+  </ion-list>
 </ion-content>
+
