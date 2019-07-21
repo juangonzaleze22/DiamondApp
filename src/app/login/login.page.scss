@@ -4,12 +4,8 @@
     position: relative;
 
     .container-login{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-     /*    border-bottom: 4px solid var(--primary); */
         width: 80%;
+        margin:auto;
 
         /* login form */
         ion-label{
@@ -25,6 +21,15 @@
                 color: var(--primary);
             }
         }
+
+        .forget{
+            margin: 15px auto;
+            text-align: centeR;
+            width: 100%;
+            display: block;
+            color: var(--secondary);
+            text-decoration: none;
+        }
            
         .Init{
             width: 100%;
@@ -32,8 +37,49 @@
             padding: 12px;
             width: 100%;
             color: #fff;
-            margin: 20px auto;
             font-size: 16px;
+        }
+        
+        .facebook{
+            margin-top: 10px;
+            background-color: #3b5998;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            ion-icon{
+                margin-right: 10px;
+            }
+        }
+
+        .google{
+            margin-top: 10px;
+            background-color: #d62d20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            ion-icon{
+                margin-right: 10px;
+            }
+        }
+
+        .form-group{
+            margin-top: 20px;
+
+            h5{
+                color: var(--gray);
+                text-align: center;
+            }
+
+            a{
+                text-align: center;
+                color: var(--primary);
+                text-decoration: none;
+                font-weight: bold;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 }

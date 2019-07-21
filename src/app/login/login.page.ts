@@ -42,4 +42,8 @@ export class LoginPage implements OnInit {
     });
   }
 
+  registro(){
+    
+  }
+
 }
