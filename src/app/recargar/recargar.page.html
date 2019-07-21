@@ -31,6 +31,14 @@
           <ion-label>Mastercard</ion-label>
           <ion-radio slot="end"></ion-radio>
         </ion-item>
+        <ion-item>
+          <ion-label>Paypal</ion-label>
+          <ion-radio slot="end"></ion-radio>
+        </ion-item>
+        <ion-item>
+        <ion-label>Skrill</ion-label>
+        <ion-radio slot="end"></ion-radio>
+      </ion-item>
         <hr>
       
         <ion-item>
@@ -59,7 +67,10 @@
           <ion-label position="floating">Monto</ion-label>
           <ion-input class="edit" type="number"></ion-input>
         </ion-item>
-
+        <ion-item *ngFor="let entry of form">
+          <ion-label>¿Anexar tarjeta de credito a su cuenta?</ion-label>
+          <ion-checkbox slot="end"></ion-checkbox>
+        </ion-item>
     
       </ion-radio-group>
     </ion-list>

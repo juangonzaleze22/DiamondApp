@@ -69,5 +69,34 @@ export class DetallesProductosPage implements OnInit {
     await alert.present();
   }
 
+  async transferencia() {
+    const alert = await this.alertController.create({
+      header: 'Alerta',
+      message: 'Se transferira al restaurante el monto de:',
+      cssClass: 'alert-style',
+      inputs: [
+        {
+          name: 'monto',
+          placeholder: 'Ingrese monto'
+        }
+      ],
+      buttons: [
+        {
+        text: 'Cancel',
+        role: 'cancel',
+        cssClass: 'cancel'
+      },
+      {
+        text: 'Aceptar',
+        role: 'submit',
+        cssClass: 'submit'
+      }
+    ]
+    });
+
+    await alert.present();
+  }
+
+
 
 }
