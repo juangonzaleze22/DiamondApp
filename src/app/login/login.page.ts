@@ -43,7 +43,7 @@ export class LoginPage implements OnInit {
   }
 
   registro(){
-    
+    this.router.navigate(['/registro']);
   }
 
 }

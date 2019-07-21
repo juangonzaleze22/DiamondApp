@@ -10,13 +10,13 @@
         <ion-label position="floating">Contraseña</ion-label>
         <ion-input type="password" [(ngModel)]="password"></ion-input>
       </ion-item>
-      <a href="#" class="forget">¿Olvidaste tu contraseña?</a>
+      <button  class="forget">¿Olvidaste tu contraseña?</button>
       <button ion-button class="Init" (click)="login()">Iniciar sesión</button>
       <button ion-button class="Init facebook"><ion-icon name="logo-facebook"></ion-icon>Iniciar con facebook </button>
       <button ion-button class="Init google"><ion-icon name="logo-google"></ion-icon>Iniciar sesión</button>
       <div class="form-group">
         <h5>¿No tienes cuenta?</h5>
-        <a href="#" (click)="registro()">¡Registrate aquí!</a>
+        <button (click)="registro()">¡Registrate aquí!</button>
       </div>
     </div>
   </div>

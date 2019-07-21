@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { MenuController, AlertController } from '@ionic/angular';
 
 import { PlatosService } from '../services/platos.service';
 import { PromosService } from '../services/promos.service';
@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
   	platos: Object[];
   	promos: Object[];
 
-  	constructor( private router : Router, private menu: MenuController, private platoService: PlatosService, private promoService: PromosService) { }
+  	constructor( private router : Router, private menu: MenuController, private platoService: PlatosService, private promoService: PromosService, public alertController: AlertController) { }
 
 	ngOnInit() {
 		this.platoService.getPlatos().subscribe(res => {
@@ -51,5 +51,34 @@ export class HomePage implements OnInit {
 	detalles(id){
 		this.router.navigate(['/detalles-productos'], { queryParams: { id: id } });
 	}
+
+	// account detaill
+
+	async cuenta() {
+	const alert = await this.alertController.create({
+		header: 'Cuentas',
+		message:'<div class="box-cuentas">'+  
+					'<div class="cuentas">' +
+						'<p class="title-cuenta">Beneficio</p>' +
+						'<p class="price">23.00 USD</p>' +
+				  '</div>'+
+				  '<div class="cuentas">' +
+						'<p class="title-cuenta">Cuenta personal</p>' +
+						'<p class="price">22.00 USD</p>' +
+					'</div>'+
+				'</div>',
+		cssClass: 'alert-style',
+		buttons: [
+		{
+		text: 'Aceptar',
+		role: 'submit',
+		cssClass: 'submit'
+		}
+	]
+	});
+
+	await alert.present();
+	}
+
 
 }

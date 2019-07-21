@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content class="home">
-  <div class="price-text">
+  <div class="price-text" (click)="cuenta()">
     <p>Saldo</p>
     <h5>23.00 USD</h5>
   </div>
@@ -52,7 +52,7 @@
         </ion-card-header>
       </div>
       <div class="box-3">
-        <button class="btn-detail" (click)="detalles(p.key)">Mas detalle</button>
+        <button class="btn-detail" (click)="detalles(p.key)">Mas detalles<ion-icon name="document"></ion-icon></button>
       <!--   <div class="separated"></div>
         <button class="btn-buy">Comprar</button> -->
       </div>

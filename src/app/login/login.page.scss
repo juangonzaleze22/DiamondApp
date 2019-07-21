@@ -29,6 +29,10 @@
             display: block;
             color: var(--secondary);
             text-decoration: none;
+            font-size: 14px;
+            background-color: transparent;
+            box-shadow: none;
+            text-align: center;
         }
            
         .Init{
@@ -68,9 +72,10 @@
             h5{
                 color: var(--gray);
                 text-align: center;
+                font-size: 14px;
             }
 
-            a{
+            button{
                 text-align: center;
                 color: var(--primary);
                 text-decoration: none;
@@ -79,6 +84,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background-color: transparent;
             }
         }
     }

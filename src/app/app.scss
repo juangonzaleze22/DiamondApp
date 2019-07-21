@@ -155,4 +155,26 @@ button{
             }
         }
     }
+
+    .box-cuentas{
+        .cuentas{
+            border: 1px solid #c1c1c1;
+            box-shadow: 3px 3px 3px #c1c1c1;
+            &:last-child{
+                margin-top: 15px;
+            }
+            p{
+                &:first-child{
+                    color: var(--primary);
+                    font-size: 15px;
+                    margin-bottom: 0;
+                }
+                &:last-child{
+                    color: var(--gray);
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
 }
